@@ -26,24 +26,27 @@ const Header = () => (
     >
       {close => (
         <div className="popup">
-          <button type="button" onClick={close}>
+          <button type="button" data-testid="closeButton" onClick={close}>
             <IoMdClose />
           </button>
-          <div>
-            <button type="button" onClick={close}>
-              <Link to="/">
-                <AiFillHome />
-                Home
-              </Link>
-            </button>
-
-            <button type="button" onClick={close}>
-              <Link to="/about">
-                <BsInfoCircleFill />
-                About
-              </Link>
-            </button>
-          </div>
+          <ul>
+            <li key="home">
+              <button type="button" onClick={close}>
+                <Link to="/">
+                  <AiFillHome />
+                  Home
+                </Link>
+              </button>
+            </li>
+            <li key="about">
+              <button type="button" onClick={close}>
+                <Link to="/about">
+                  <BsInfoCircleFill />
+                  About
+                </Link>
+              </button>
+            </li>
+          </ul>
         </div>
       )}
     </Popup>
