@@ -19,7 +19,7 @@ const Header = () => (
     <Popup
       modal
       trigger={
-        <button type="button">
+        <button data-testid="hamburgerIconButton" type="button">
           <GiHamburgerMenu />
         </button>
       }
